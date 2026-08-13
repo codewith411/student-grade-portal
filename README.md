@@ -1,16 +1,43 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Student Grade Portal
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The Student Grade Portal is a React-based web application that
+allows students to access important academic information through
+a centralized portal.
 
-## React Compiler
+Students can navigate through the application to view their
+dashboard, registered units, profile information, and academic
+grades.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Student home page
+- Student login page
+- Student dashboard
+- Registered units
+- Student profile
+- Automatic registration status
+- Academic grades
+- GPA and average marks
+- Grade filtering
+- Responsive user interface
+- Navigation between portal sections
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+- React
+- JavaScript
+- Vite
+- React Router
+- CSS
+- Git
+- GitHub
+
+## Installation
+
+Clone the repository and install the project dependencies:
+
+```bash
+npm install

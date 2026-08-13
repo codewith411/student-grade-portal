@@ -1,6 +1,6 @@
-import * as StudentModule from "../data/student";
+import studentData from "../data/student";
 
-const student = StudentModule.default ?? StudentModule.student ?? {
+const student = studentData ?? {
   name: "John Doe",
   registrationNumber: "SCT221-0123/2023",
   studentId: "SCT221-0123/2023",

@@ -1,4 +1,11 @@
-import student from "../data/student";
+import * as StudentModule from "../data/student";
+
+const student = StudentModule.default ?? StudentModule.student ?? {
+  name: "John Doe",
+  registrationNumber: "SCT221-0123/2023",
+  studentId: "SCT221-0123/2023",
+  programme: "Bachelor of Computer Science",
+};
 
 function StudentCard() {
   return (
@@ -13,11 +20,12 @@ function StudentCard() {
         <h2>{student.name}</h2>
 
         <p className="student-id">
-          Student ID: {student.studentId}
+          Student ID:{" "}
+          {student.registrationNumber || student.studentId || student.id || "—"}
         </p>
 
         <p className="student-program">
-          {student.programme}
+          {student.programme || student.program || "—"}
         </p>
       </div>
 

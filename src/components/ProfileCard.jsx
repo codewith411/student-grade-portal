@@ -1,6 +1,7 @@
 import student from "../data/student";
 import courses from "../data/courses";
 
+
 function ProfileCard() {
   const registeredUnits = courses.filter(
     (course) =>
@@ -36,37 +37,7 @@ function ProfileCard() {
         </p>
 
       </div>
-
-
-      {/* AUTOMATIC REGISTRATION STATUS */}
-
-      <div
-        className={
-          isRegistered
-            ? "profile-registration profile-registration--active"
-            : "profile-registration profile-registration--inactive"
-        }
-      >
-
-        <span className="registration-dot"></span>
-
-        <div>
-
-          <strong>
-            {isRegistered
-              ? "Registered"
-              : "Not Registered"}
-          </strong>
-
-          <p>
-            {isRegistered
-              ? `You are registered for ${student.currentSemester}.`
-              : `You are not registered for ${student.currentSemester}.`}
-          </p>
-
-        </div>
-
-      </div>
+      
 
 
       <div className="profile-details">

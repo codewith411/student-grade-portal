@@ -1,11 +1,3 @@
-function getStatusIcon(s) {
-  if (s === "Passed") return "🟢";
-  if (s === "Failed") return "🔴";
-  if (s === "Missing Mark") return "⚠️";
-  if (s === "Incomplete") return "⏳";
-  return "";
-}
-
 function GradesTable({ grades = [] }) {
   if (grades.length === 0) {
     return (
@@ -13,7 +5,6 @@ function GradesTable({ grades = [] }) {
         <div className="section-heading">
           <div>
             <p className="eyebrow">Academic Performance</p>
-
             <h2>Semester Grades</h2>
           </div>
         </div>
@@ -36,11 +27,12 @@ function GradesTable({ grades = [] }) {
       <div className="section-heading">
         <div>
           <p className="eyebrow">Academic Performance</p>
-
           <h2>Semester Grades</h2>
         </div>
 
-        <span className="semester-badge">{grades[0]?.semester}</span>
+        <span className="semester-badge">
+          {grades[0]?.semester}
+        </span>
       </div>
 
       <div className="table-wrapper">
@@ -65,21 +57,29 @@ function GradesTable({ grades = [] }) {
 
                 <td>{item.course}</td>
 
-                <td>{item.marks == null ? "—" : `${item.marks}%`}</td>
-
                 <td>
-                  <span className="grade-value">{item.grade}</span>
+                  {item.marks == null
+                    ? "—"
+                    : `${item.marks}%`}
                 </td>
 
                 <td>
-                  {item.points == null ? "—" : Number(item.points).toFixed(1)}
+                  <span className="grade-value">
+                    {item.grade}
+                  </span>
+                </td>
+
+                <td>
+                  {item.points == null
+                    ? "—"
+                    : Number(item.points).toFixed(1)}
                 </td>
 
                 <td>
                   <span
                     className={`grade-status grade-status--${item.status
                       .toLowerCase()
-                      .replace(" ", "-")}`}
+                      .replace(/\s+/g, "-")}`}
                   >
                     {item.status === "Passed" && "✓"}
                     {item.status === "Failed" && "✕"}
